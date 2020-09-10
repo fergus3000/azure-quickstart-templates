@@ -27,6 +27,13 @@
         "description": "Location for all resources."
       }
     },
+    "customVMSize": {
+      "type": "string",
+      "defaultValue": "B2s",
+      "metadata": {
+        "description": "Your docker VM size (used to be standard_d1, but must be available in your region, 1 core, 4gb ram)."
+      }
+    },
     "authenticationType": {
       "type": "string",
       "defaultValue": "sshPublicKey",
@@ -61,7 +68,7 @@
     "publicIPAddressType": "Dynamic",
     "vmStorageAccountContainerName": "vhds",
     "vmName": "MyDockerVM",
-    "vmSize": "Standard_D1",
+    "vmSize": [parameters('customVMSize')],
     "virtualNetworkName": "MyVNET",
     "nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('nsgName'))]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
