@@ -31,7 +31,7 @@
       "type": "string",
       "defaultValue": "B2s",
       "metadata": {
-        "description": "Your docker VM size (used to be standard_d1, but must be available in your region, 1 core, 4gb ram)."
+        "description": "Your docker VM size (used to be Standard_D1, but must be available in your region, 1 core, 4gb ram)."
       }
     },
     "authenticationType": {
