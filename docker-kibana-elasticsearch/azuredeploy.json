@@ -27,7 +27,7 @@
         "description": "Location for all resources."
       }
     },
-    "customVMSize": {
+    "vmSize": {
       "type": "string",
       "defaultValue": "B2s",
       "metadata": {
@@ -68,7 +68,6 @@
     "publicIPAddressType": "Dynamic",
     "vmStorageAccountContainerName": "vhds",
     "vmName": "MyDockerVM",
-    "vmSize": [parameters('customVMSize')],
     "virtualNetworkName": "MyVNET",
     "nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('nsgName'))]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
@@ -208,7 +207,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[variables('vmSize')]"
+          "vmSize": "[parameters('vmSize')]"
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
