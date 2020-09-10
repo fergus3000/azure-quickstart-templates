@@ -29,14 +29,14 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "B2s",
+      "defaultValue": "Standard_B2s",
       "metadata": {
         "description": "Your docker VM size (used to be Standard_D1, but must be available in your region, 1 core, 4gb ram)."
       }
     },
     "authenticationType": {
       "type": "string",
-      "defaultValue": "sshPublicKey",
+      "defaultValue": "password",
       "allowedValues": [
         "sshPublicKey",
         "password"
